@@ -1,0 +1,196 @@
+﻿N queeen’s problem back tracking output
+N Queens Problem Using Backtracking -
+
+Enter number of Queens:5
+
+
+Solution 1:
+
+	1	2	3	4	5
+
+1	Q	-	-	-	-
+
+2	-	-	Q	-	-
+
+3	-	-	-	-	Q
+
+4	-	Q	-	-	-
+
+5	-	-	-	Q	-
+
+Solution 2:
+
+	1	2	3	4	5
+
+1	Q	-	-	-	-
+
+2	-	-	-	Q	-
+
+3	-	Q	-	-	-
+
+4	-	-	-	-	Q
+
+5	-	-	Q	-	-
+
+Solution 3:
+
+	1	2	3	4	5
+
+1	-	Q	-	-	-
+
+2	-	-	-	Q	-
+
+3	Q	-	-	-	-
+
+4	-	-	Q	-	-
+
+5	-	-	-	-	Q
+
+Solution 4:
+
+	1	2	3	4	5
+
+1	-	Q	-	-	-
+
+2	-	-	-	-	Q
+
+3	-	-	Q	-	-
+
+4	Q	-	-	-	-
+
+5	-	-	-	Q	-
+
+Solution 5:
+
+	1	2	3	4	5
+
+1	-	-	Q	-	-
+
+2	Q	-	-	-	-
+
+3	-	-	-	Q	-
+
+4	-	Q	-	-	-
+
+5	-	-	-	-	Q
+
+Solution 6:
+
+	1	2	3	4	5
+
+1	-	-	Q	-	-
+
+2	-	-	-	-	Q
+
+3	-	Q	-	-	-
+
+4	-	-	-	Q	-
+
+5	Q	-	-	-	-
+
+Solution 7:
+
+	1	2	3	4	5
+
+1	-	-	-	Q	-
+
+2	Q	-	-	-	-
+
+3	-	-	Q	-	-
+
+4	-	-	-	-	Q
+
+5	-	Q	-	-	-
+
+Solution 8:
+
+	1	2	3	4	5
+
+1	-	-	-	Q	-
+
+2	-	Q	-	-	-
+
+3	-	-	-	-	Q
+
+4	-	-	Q	-	-
+
+5	Q	-	-	-	-
+
+Solution 9:
+
+	1	2	3	4	5
+
+1	-	-	-	-	Q
+
+2	-	Q	-	-	-
+
+3	-	-	-	Q	-
+
+4	Q	-	-	-	-
+
+5	-	-	Q	-	-
+
+Solution 10:
+
+	1	2	3	4	5
+
+1	-	-	-	-	Q
+
+2	-	-	Q	-	-
+
+3	Q	-	-	-	-
+
+4	-	-	-	Q	-
+
+
+
+
+
+
+
+
+
+
+
+
+
+kruskal’s algorithm output:
+
+
+Implementation of Kruskal's algorithm
+
+
+ enter the no of vertices
+3
+
+ enter the cost adjacency matrix
+0 1 1
+1 0 0
+1 0 0
+
+ the edges of minimum cost spanning tree are
+
+
+1 edge (1,2)=1
+
+2 edge (1,3)=1
+
+
+prim’s algorithm output:
+
+
+Enter no. of vertices:3
+
+Enter the adjacency matrix:
+0 1 1
+1 0 0
+1 0 0
+
+spanning tree matrix:
+
+0	1	1	
+1	0	0	
+1	0	0	
+
+Total cost of spanning tree=2
+
