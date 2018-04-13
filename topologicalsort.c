@@ -1,53 +1,44 @@
-#include<stdio.h>
-int a[10][10],n,indegre[10];
-void find_indegre()
-{ int j,i,sum;
-for(j=0;j<n;j++)
-{
-sum=0;
-for(i=0;i<n;i++)
-sum+=a[i][j];
-indegre[j]=sum;
+#include <stdio.h>
+ 
+int main(){
+    int i,j,k,n,a[10][10],indeg[10],flag[10],count=0;
+ 
+    printf("Enter the no of vertices:\n");
+    scanf("%d",&n);
+ 
+    printf("Enter the adjacency matrix:\n");
+    for(i=0;i<n;i++){
+        printf("Enter row %d\n",i+1);
+        for(j=0;j<n;j++)
+            scanf("%d",&a[i][j]);
+    }
+ 
+    for(i=0;i<n;i++){
+        indeg[i]=0;
+        flag[i]=0;
+    }
+ 
+    for(i=0;i<n;i++)
+        for(j=0;j<n;j++)
+            indeg[i]=indeg[i]+a[j][i];
+ 
+    printf("\nThe topological order is:");
+ 
+    while(count<n){
+        for(k=0;k<n;k++){
+            if((indeg[k]==0) && (flag[k]==0)){
+                printf("%d ",(k+1));
+                flag [k]=1;
+            }
+ 
+            for(i=0;i<n;i++){
+                if(a[i][k]==1)
+                    indeg[k]--;
+            }
+        }
+ 
+        count++;
+    }
+ 
+    return 0;
 }
-}
-void topology()
-{
-int i,u,v,t[10],s[10],top=-1,k=0;
-find_indegre();
-for(i=0;i<n;i++)
-{
-if(indegre[i]==0) s[++top]=i;
-}
-while(top!=-1)
-{
-u=s[top--];
-t[k++]=u;
-for(v=0;v<n;v++)
-{
-if(a[u][v]==1)
-{
-indegre[v]--;
-if(indegre[v]==0) s[++top]=v;
-}
-}
-}
-printf("The topological Sequence is:\n");
-for(i=0;i<n;i++)
-printf("%d ",t[i]);
-}
-void main()
-{
-int i,j;
-printf("Enter number of jobs:");
-scanf("%d",&n);
-printf("\nEnter the adjacency matrix:\n");
-for(i=0;i<n;i++)
-{
-for(j=0;j<n;j++)
-scanf("%d",&a[i][j]);
-}
-topology();
-
-}
-
-
